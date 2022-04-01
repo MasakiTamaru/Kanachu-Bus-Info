@@ -1,4 +1,4 @@
-# Physics_Sim_Py
+# Unkoujouhou_Py
 
 "Physics_Sim_Py" is a tutorial of physics simulations with Python.
 
