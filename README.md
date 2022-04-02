@@ -1,9 +1,10 @@
 # Unkoujouhou_Py
 
 神奈中バスのソフトウェアの"神奈中バスロケ"のスクレイピングをしました。
-(http://real.kanachu.jp/pc/top)←こちらに自分が調べたい乗車バス停と
-降車バス停を入力し検索ボタンを押します。検索後のページのURLを、unkoujouhou.pyの
-変数(url)に代入することで、必要な情報のみをスクレイピングしてくれます。
+(http://real.kanachu.jp/pc/top)  
+こちらに自分が調べたい乗車バス停と降車バス停を入力し検索ボタンを押します。
+検索後のページのURLを、unkoujouhou.pyの変数(url)に代入することで、
+必要な情報のみをスクレイピングしてくれます。
 
 # Unkoujouhou2_py
 
