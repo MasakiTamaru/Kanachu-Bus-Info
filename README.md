@@ -8,7 +8,7 @@
 
 # Unkoujouhou2_py
 
-unkoujouhou.pyとほとんど変わりませんが、こちらでは、時間をしてすることで、
+unkoujouhou.pyとほとんど変わりませんが、こちらでは、時間を指定することで、
 一定間隔で、スクレイピングをし続けてくれます。
 
 # What I want to do
