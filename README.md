@@ -17,6 +17,8 @@ micro_Python で同じように実現したく考えています。(M5STACKに�
 また、unkoujouhou2.pyでは、無限ループになってしまっているので、
 毎朝この時間からこの時間までのように、特定の時間のみ実行するプログラムを作成したいです。
 
+URLをはらずにpythonに入力させる →  https://ai-inter1.com/python-selenium/
+
 # Finally
 
 まだまだ初心者だと思うので、アドバイスよろしくお願いします！
