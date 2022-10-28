@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 
 now = datetime.datetime.now()
 
-url = "http://real.kanachu.jp/pc/displayapproachinfo?fNO=11140&tNO=11223&fNM=%8B%DA%82%AA%92%4A%92%63%92%6E%91%4F%28%89%A1%95%6C%8E%73%8D%60%93%EC%8B%E6%29&tNM=%8F%E3%91%E5%89%AA%89%77%28%89%A1%95%6C%8E%73%8D%60%93%EC%8B%E6%29"
+url = ""
 res = req.urlopen(url)
 soup = BeautifulSoup(res, "html.parser")
 
