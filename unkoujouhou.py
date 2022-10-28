@@ -18,7 +18,7 @@ soup = BeautifulSoup(res, "html.parser")
 
 result = []      #何系統のバスか
 when = []        #到着情報1
-becoming = []   #到着情報2
+becoming = []    #到着情報2
 
 
 inner_list = soup.find_all(class_="inner2 pa01")
