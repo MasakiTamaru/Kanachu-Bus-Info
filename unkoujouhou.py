@@ -12,13 +12,13 @@ from bs4 import BeautifulSoup
 
 now = datetime.datetime.now()
 
-url = ""
+url = "http://real.kanachu.jp/pc/displayapproachinfo?fNO=11140&tNO=11223&fNM=%8B%DA%82%AA%92%4A%92%63%92%6E%91%4F%28%89%A1%95%6C%8E%73%8D%60%93%EC%8B%E6%29&tNM=%8F%E3%91%E5%89%AA%89%77%28%89%A1%95%6C%8E%73%8D%60%93%EC%8B%E6%29"
 res = req.urlopen(url)
 soup = BeautifulSoup(res, "html.parser")
 
 result = []      #何系統のバスか
 when = []        #到着情報1
-becomeing = []   #到着情報2
+becoming = []   #到着情報2
 
 
 inner_list = soup.find_all(class_="inner2 pa01")
@@ -74,7 +74,7 @@ for wrap in wrap_list:
                     tmp_9 = tmp_8.replace("\t", "")
                     tmp_10 = tmp_9.replace("\r", "")
                     result_row_2.append(tmp_10)
-                    becomeing.append(result_row_2)
+                    becoming.append(result_row_2)
 
 
 #ここから下で情報表示
@@ -86,5 +86,5 @@ for i in range(19):
     if i % 2 == 0:
         new_result.append(zip(result[i], result[i+1]))
 
-for new_result, when, becomeing in zip(new_result, when, becomeing):
-    print(list(new_result), when, becomeing)
+for new_result, when, becoming in zip(new_result, when, becoming):
+    print(list(new_result), when, becoming)
