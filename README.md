@@ -1,4 +1,4 @@
-# Unkoujouhou_Py
+# Unkoujouhou.py
 
 神奈中バスのソフトウェアの"神奈中バスロケ"のスクレイピングをしました。
 (http://real.kanachu.jp/pc/top)  
@@ -6,10 +6,15 @@
 検索後のページのURLを、unkoujouhou.pyの変数(url)に代入することで、
 必要な情報のみをスクレイピングしてくれます。
 
-# Unkoujouhou2_py
+# Unkoujouhou2.py
 
 unkoujouhou.pyとほとんど変わりませんが、こちらでは、時間を指定することで、
 一定間隔で、スクレイピングをし続けてくれます。
+
+# Unkoujouhou3.py
+
+unkoujouhou.pyに自動で検索するモジュールを追加しました。
+実行して、バス停名を入力すると検索結果が開きます。
 
 # What I want to do
 
