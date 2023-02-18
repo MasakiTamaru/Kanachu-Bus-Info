@@ -80,11 +80,12 @@ for wrap in wrap_list:
 #ここから下で情報表示
 print("データ取得時刻: " + str(now.hour) + "時" + str(now.minute) + "分" + str(now.second) + "秒")
 
-#resultの要素数を10に調整
+# #resultの要素数を10に調整
 new_result = []
-for i in range(19):
+for i in range(len(result)):
     if i % 2 == 0:
         new_result.append(zip(result[i], result[i+1]))
+
 
 for new_result, when, becoming in zip(new_result, when, becoming):
     print(list(new_result), when, becoming)

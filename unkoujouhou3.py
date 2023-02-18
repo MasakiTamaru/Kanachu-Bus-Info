@@ -12,33 +12,36 @@ from bs4 import BeautifulSoup
 
 # chrome driver and selenium
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from time import sleep
+
+# headless mode
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.add_argument('--headless') # if this row is not comment out, headless mode.
 
 now = datetime.datetime.now()
 
-# ----------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------
 
 where_to_take_the_bus = input('乗車バス停名: ')
 where_to_get_off_the_bus = input('降車バス停名: ')
 
-driver = webdriver.Chrome('C:\Test_Folder\chromedriver_win32\chromedriver')
+driver = webdriver.Chrome('C:\Test_Folder\chromedriver_win32\chromedriver', options=options)
 driver.get('http://real.kanachu.jp/pc/top')
 search_first_bar = driver.find_element_by_name("fNM")
 search_first_bar.send_keys(where_to_take_the_bus)
 search_second_bar = driver.find_element_by_name("tNM")
 search_second_bar.send_keys(where_to_get_off_the_bus)
-search_first_bar.submit()
 search_second_bar.submit()
 
 url = driver.current_url
-print(url)
 res = req.urlopen(url)
 soup = BeautifulSoup(res, "html.parser")
 
 result = []      #何系統のバスか
 when = []        #到着情報1
 becoming = []    #到着情報2
-
 
 inner_list = soup.find_all(class_="inner2 pa01")
 
@@ -99,11 +102,14 @@ for wrap in wrap_list:
 #ここから下で情報表示
 print("データ取得時刻: " + str(now.hour) + "時" + str(now.minute) + "分" + str(now.second) + "秒")
 
-#resultの要素数を10に調整
+# #resultの要素数を10に調整
 new_result = []
-for i in range(19):
+for i in range(len(result)):
     if i % 2 == 0:
         new_result.append(zip(result[i], result[i+1]))
 
 for new_result, when, becoming in zip(new_result, when, becoming):
     print(list(new_result), when, becoming)
+
+# webページを閉じる
+driver.close()
