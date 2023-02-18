@@ -26,7 +26,7 @@ URLをはらずにpythonに入力させる →  https://ai-inter1.com/python-sel
 
 # Additional Information
 
-このプログラムであると、神奈中バスのページから乗車バス停と降車バス亭を検索した結果を
+このプログラム(unkoujouhou.py)であると、神奈中バスのページから乗車バス停と降車バス亭を検索した結果を
 URLにする必要がある。以下のライブラリを用いると、ブラウザの操作(検索)も行ってくれる。
 
 https://ai-inter1.com/python-selenium/
