@@ -18,7 +18,7 @@ from time import sleep
 # headless mode
 from selenium.webdriver.chrome.options import Options
 options = Options()
-options.add_argument('--headless') # if this row is not comment out, headless mode.
+# options.add_argument('--headless') # if this row is not comment out, headless mode.
 
 now = datetime.datetime.now()
 
