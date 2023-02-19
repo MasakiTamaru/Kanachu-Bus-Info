@@ -23,13 +23,8 @@ options = Options()
 
 # -------------------------------------------------------------------------------------------
 
-# input バージョン
-# where_to_take_the_bus = input('乗車バス停名: ')
-# where_to_get_off_the_bus = input('降車バス停名: ')
-
-
-where_to_take_the_bus = '芹が谷団地前'
-where_to_get_off_the_bus = '上大岡駅'
+where_to_take_the_bus = input('乗車バス停名: ')
+where_to_get_off_the_bus = input('降車バス停名: ')
 
 driver = webdriver.Chrome('C:\Test_Folder\chromedriver_win32\chromedriver', options=options)
 driver.set_page_load_timeout(100)    # 少し待機
